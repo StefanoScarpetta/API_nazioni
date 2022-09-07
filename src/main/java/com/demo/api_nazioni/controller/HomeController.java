@@ -1,25 +1,23 @@
 package com.demo.api_nazioni.controller;
 
-import com.demo.api_nazioni.RestApi.ToRestApi;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import com.demo.api_nazioni.Nazione.Nazione;
+import com.demo.api_nazioni.service.ServiceData;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
-@Controller //identifica questa classe come un controller
+@Controller
 public class HomeController {
-    @RequestMapping("/") //il metodo action risponde ad un determinato path specificato come parametro /
-    public String init() throws IOException, ParseException {
-
-        //JSONParser parser = new JSONParser();
-        //Object obj = parser.parse(new FileReader("C:\\Users\\stefa\\Desktop\\Java\\API-nazioni\\API nazioni\\src\\main\\java\\com\\demo\\api_nazioni\\RestApi\\db.json"));
-        //JSONObject file = (JSONObject) obj;
-
+    @RequestMapping("/")
+    public String init(Model model) throws IOException, ParseException {
+        //ServiceData serviceData = new ServiceData();
+        //List<Nazione> list = (List<Nazione>) serviceData.getAll();
+        ////Nazione nazione = (Nazione) list.get(2);
+        //model.addAttribute(list);
         return "index";
     }
 }

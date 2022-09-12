@@ -3,32 +3,31 @@
     margin:0px;
     box-sizing: border-box;
 }
-
 .pointer {
 	cursor:pointer;
 }
-
-a {
+.titolo {
     color: #000000;
     text-decoration: none;
 }
-
-/* Unvisited link  */
-a:visited {color: #000000;} /* Visited link    */
-a:hover {color: #6ef839;}   /* Mouse over link */
-a:active {color: #257e34;}  /* Selected link   */
-
-.align-right {
-	text-align:right;
+.titolo:visited {
+    color: #000000;
 }
-
+.titolo:hover {
+    color: #6ef839;
+}
+.titolo:active {
+    color: #257e34;
+}
+.align-right {
+	text-align: right;
+}
 body {
     background-color: #ffffff;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 	font-size:16px;
 }
-
 header {
     position: fixed;
     width:100%;
@@ -44,9 +43,147 @@ header {
     padding:80px 200px 50px 200px;
 	font-size:30px;
 }
-
 main {
     margin:50px 50px;
 }
-
-
+table {
+    padding: 0;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+thead th {
+    position: sticky;
+    text-align: center;
+    border: 1px solid black;
+    min-height: 30px;
+    height: 30px;
+    white-space: nowrap;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+}
+th {
+    min-width: 75px;
+    width: 75px;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+.colonna {
+    left: 0;
+    position: sticky;
+    background-color: white;
+}
+.colonna2 {
+    left: 75px;
+    position: sticky;
+    background-color: white;
+}
+.colonna3 {
+    left: 440px;
+    position: sticky;
+    background-color: white;
+}
+.th {
+    z-index: 50;
+    background-color: white;
+}
+td, th {
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    white-space: nowrap;
+    padding: 10px 10px 10px 10px;
+    outline: 1px solid black;
+    outline-offset: -1px;
+    background-color: white;
+}
+tr {
+    min-height: 25px;
+    height: 25px;
+}
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 30px;
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    z-index: 1;
+    text-align: center;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    font-size: 22px;
+    background-color: white;
+}
+.dropdown-content a:hover {
+    background-color: white;
+    color: #6ef839;
+}
+.dropdown-content a:active {
+    background-color: white;
+    color: #257e34;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color: #6ef839;
+}
+.errore {
+    text-align: center;
+    padding-top: 50px;
+    padding-top: 50px;
+    font-size: 120px;
+    color: red;
+}
+.erroreDescription {
+    text-align: center;
+    font-size: 60px;
+}
+.linkErrore {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    text-decoration: none;
+    color: black;
+}
+.linkErrore:visited {
+    color: #000000;
+}
+.linkErrore:hover {
+    color: #6ef839;
+}
+.linkErrore:active {
+    color: #257e34;
+}
+form {
+    alignment: center;
+}
+label {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+input {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+.info {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}

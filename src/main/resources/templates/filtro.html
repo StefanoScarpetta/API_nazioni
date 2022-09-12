@@ -3,24 +3,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>API Nazioni</title>
+		<title>API Nazioni Fitrato</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="./css/style.css">
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$.ajax({
-					url : '/dati',
+					url : '/filtrato',
 					method : 'get',
-					success : function(data) {
-						for(var i = data.length - 1; i >= 0; i--) {
+					success : function(data2) {
+						for(var i = data2.length - 1; i >= 0; i--) {
 							$('.grid').append(`<tbody class="grid-item">
-											<tr><td class="colonna">${data[i].id}</td><td class="colonna2">${data[i].nazione}</td><td>${data[i].sigla}</td>
-											<td>${data[i]._2000}</td><td>${data[i]._2001}</td><td>${data[i]._2002}</td>
-											<td>${data[i]._2003}</td><td>${data[i]._2004}</td><td>${data[i]._2005}</td>
-											<td>${data[i]._2006}</td><td>${data[i]._2007}</td><td>${data[i]._2008}</td>
-											<td>${data[i]._2009}</td><td>${data[i]._2010}</td><td>${data[i]._2011}</td>
-											<td>${data[i]._2012}</td><td>${data[i]._2013}</td><td>${data[i]._2014}</td>
-											<td>${data[i]._2015}</td><td>${data[i]._2016}</td><td>${data[i]._2017}</td></tr>
+											<tr><td class="colonna">${data2[i].id}</td><td class="colonna2">${data2[i].nazione}</td><td>${data2[i].sigla}</td>
+											<td>${data2[i]._2000}</td><td>${data2[i]._2001}</td><td>${data2[i]._2002}</td>
+											<td>${data2[i]._2003}</td><td>${data2[i]._2004}</td><td>${data2[i]._2005}</td>
+											<td>${data2[i]._2006}</td><td>${data2[i]._2007}</td><td>${data2[i]._2008}</td>
+											<td>${data2[i]._2009}</td><td>${data2[i]._2010}</td><td>${data2[i]._2011}</td>
+											<td>${data2[i]._2012}</td><td>${data2[i]._2013}</td><td>${data2[i]._2014}</td>
+											<td>${data2[i]._2015}</td><td>${data2[i]._2016}</td><td>${data2[i]._2017}</td></tr>
 											</tbody>`);
 						}
 					}
@@ -30,9 +30,9 @@
 	</head>
 	<body>
 		<header>
-			<div><a href="./dati" class="titolo">DATI</a></div>
-			<div><a href="./filtra/form" class="titolo">FILTRA</a></div>
-			<div><a href="./json" class="titolo">JSON</a></div>
+			<div><a href="/filtrato" class="titolo">DATI</a></div>
+			<div><a href="/" class="titolo">HOME</a></div>
+			<div><a href="/json" class="titolo">JSON</a></div>
 		</header>
 		<main>
 			<div style="overflow: auto; width: 1425px; height: 500px; margin-top: 170px;">

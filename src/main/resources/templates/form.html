@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<form action="/filtra" target="_self">
+    <label for="dato">Anno da considerare:</label><br>
+    <input type="text" id="dato" name="dato" value="2000"><br>
+    <label for="condizione">Condizione:</label><br>
+    <input type="text" id="condizione" name="condizione" value="gt"><br>
+    <label for="valore">Valore:</label><br>
+    <input type="text" id="valore" name="valore" value="1000"><br>
+    <label for="valore2">Secondo valore:</label><br>
+    <input type="text" id="valore2" name="valore2" value="2000"><br>
+    <input type="submit" value="Submit">
+</form>
+<p class="info">gt = greater </br>
+    gte = greater equal </br>
+    lt = lower </br>
+    lte = lower equal </br>
+    Modifica la sezione "Secondo valore" solo se vuoi usare la condizione bt (between)</p>
+</body>
+</html>

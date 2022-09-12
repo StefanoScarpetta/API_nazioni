@@ -26,7 +26,7 @@ public class ServiceData implements IService {
                     generalInformation.getDimension().getItems().get(1).getCategory().getLista().get(i).getIndex(),
                     generalInformation.getDimension().getItems().get(1).getCategory().getLista().get(i).getLabel(),
                     generalInformation.getDimension().getItems().get(1).getCategory().getLista().get(i).getKey(),
-                    generalInformation.getValue().get(String.valueOf(b+0)),
+                    generalInformation.getValue().get(String.valueOf(b)),
                     generalInformation.getValue().get(String.valueOf(b+1)),
                     generalInformation.getValue().get(String.valueOf(b+2)),
                     generalInformation.getValue().get(String.valueOf(b+3)),

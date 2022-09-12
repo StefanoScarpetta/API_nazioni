@@ -13,11 +13,11 @@ import java.util.List;
 @Controller
 public class HomeController {
     @RequestMapping("/")
-    public String init(Model model) throws IOException, ParseException {
-        //ServiceData serviceData = new ServiceData();
-        //List<Nazione> list = (List<Nazione>) serviceData.getAll();
-        ////Nazione nazione = (Nazione) list.get(2);
-        //model.addAttribute(list);
+    public String init(Model model) {
         return "index";
+    }
+    @RequestMapping("/filtra/form")
+    public String form() {
+        return "form";
     }
 }

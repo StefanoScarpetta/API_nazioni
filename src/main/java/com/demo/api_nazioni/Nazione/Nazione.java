@@ -247,4 +247,63 @@ class Nazione {
                 ", _2017=" + _2017 +
                 '}';
     }
+
+    public Double getDato(String dato) {
+        Double valore = (double) 0;
+        if(("_" + dato).equals("_2000")){
+            valore = Double.parseDouble(_2000.toString());
+        }
+        if(("_" + dato).equals("_2001")){
+            valore = Double.parseDouble(_2001.toString());
+        }
+        if(("_" + dato).equals("_2002")){
+            valore = Double.parseDouble(_2002.toString());
+        }
+        if(("_" + dato).equals("_2003")){
+            valore = Double.parseDouble(_2003.toString());
+        }
+        if(("_" + dato).equals("_2004")){
+            valore = Double.parseDouble(_2004.toString());
+        }
+        if(("_" + dato).equals("_2005")){
+            valore = Double.parseDouble(_2005.toString());
+        }
+        if(("_" + dato).equals("_2006")){
+            valore = Double.parseDouble(_2006.toString());
+        }
+        if(("_" + dato).equals("_2007")){
+            valore = Double.parseDouble(_2007.toString());
+        }
+        if(("_" + dato).equals("_2008")){
+            valore = Double.parseDouble(_2008.toString());
+        }
+        if(("_" + dato).equals("_2009")){
+            valore = Double.parseDouble(_2009.toString());
+        }
+        if(("_" + dato).equals("_2010")){
+            valore = Double.parseDouble(_2010.toString());
+        }
+        if(("_" + dato).equals("_2011")){
+            valore = Double.parseDouble(_2011.toString());
+        }
+        if(("_" + dato).equals("_2012")){
+            valore = Double.parseDouble(_2012.toString());
+        }
+        if(("_" + dato).equals("_2013")){
+            valore = Double.parseDouble(_2013.toString());
+        }
+        if(("_" + dato).equals("_2014")){
+            valore = Double.parseDouble(_2014.toString());
+        }
+        if(("_" + dato).equals("_2015")){
+            valore = Double.parseDouble(_2015.toString());
+        }
+        if(("_" + dato).equals("_2016")){
+            valore = Double.parseDouble(_2016.toString());
+        }
+        if(("_" + dato).equals("_2017")){
+            valore = Double.parseDouble(_2017.toString());
+        }
+        return valore;
+    }
 }

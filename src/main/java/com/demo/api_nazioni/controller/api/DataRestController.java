@@ -4,30 +4,38 @@ import com.demo.api_nazioni.Nazione.Nazione;
 import com.demo.api_nazioni.service.ServiceData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
-public class DataController {
+@RestController
+public class DataRestController {
     @Autowired
     @Qualifier("mainData")
     private ServiceData service;
     private List<Nazione> provvisoria;
+    @Autowired
+    private DataController provv;
 
-    public DataController() {
+    public DataRestController() {
     }
 
-    @RequestMapping("/filtra")
-    public String getGTLT(@RequestParam String dato, @RequestParam String condizione, @RequestParam Double valore, @RequestParam Double valore2) {
-        if(!(dato.equals("2000")||dato.equals("2001")||dato.equals("2002")||dato.equals("2003")||dato.equals("2004")||dato.equals("2005")||dato.equals("2006")||
-                dato.equals("2007")||dato.equals("2008")||dato.equals("2009")||dato.equals("2010")||dato.equals("2011")||dato.equals("2012")||dato.equals("2013")||
-                dato.equals("2014")||dato.equals("2015")||dato.equals("2016")||dato.equals("2017"))) {
-            return "error";
-        }
+    @RequestMapping("/dati")
+    @ResponseBody
+    public Iterable<Nazione> getAll() {
+        return service.getAll();
+    }
+
+    @RequestMapping("/filtrato")
+    @ResponseBody
+    public Iterable<Nazione> getProvv() {
+        return provv.getProvvisoria();
+    }
+
+    @RequestMapping("/dati/filtra")
+    @ResponseBody
+    public List<Nazione> getGTLT(@RequestParam String dato, @RequestParam String condizione, @RequestParam Double valore, @RequestParam Double valore2) {
         provvisoria = new ArrayList<Nazione>();
         provvisoria.addAll((List<Nazione>) service.getAll());
         for(int y=0; y<5; y++) {
@@ -67,13 +75,14 @@ public class DataController {
                 }
             }
             else {
-                return "error";
+                provvisoria.clear();
             }
         }
-        return "filtro";
-    }
-
-    public List<Nazione> getProvvisoria() {
+        if(!(dato.equals("2000")||dato.equals("2001")||dato.equals("2002")||dato.equals("2003")||dato.equals("2004")||dato.equals("2005")||dato.equals("2006")||
+                dato.equals("2007")||dato.equals("2008")||dato.equals("2009")||dato.equals("2010")||dato.equals("2011")||dato.equals("2012")||dato.equals("2013")||
+                dato.equals("2014")||dato.equals("2015")||dato.equals("2016")||dato.equals("2017"))) {
+            provvisoria.clear();
+        }
         return provvisoria;
     }
 }

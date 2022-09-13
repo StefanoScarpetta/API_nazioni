@@ -170,7 +170,7 @@ tr {
     color: #257e34;
 }
 form {
-    alignment: center;
+    align-items: center;
 }
 label {
     padding: 15px;
